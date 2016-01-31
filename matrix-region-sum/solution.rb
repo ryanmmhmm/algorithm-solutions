@@ -59,8 +59,8 @@ class Matrix
     y = find_y(coordinate)
 
     for row in 0..y
-      for value in 0..x
-        sum += @o[y][x]
+      for column in 0..x
+        sum += @o[row][column]
       end
     end
 
