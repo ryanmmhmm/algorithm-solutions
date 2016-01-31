@@ -4,12 +4,16 @@
 ## A and D (being opposing corners of an interior sub rectangle of O)
 ## A, B, C and D are described as points like so: [x,y]
 
+## a ----- b
+## .       .
+## c ----- d
+
 ## Define Input matrix
 class Matrix
 
   attr_reader :o, :a, :b, :c, :d
 
-  def initialize(o = 10, a=[3,3], b=[3,7], c=[7,3], d=[7,7])
+  def initialize(o = 10, a=[3,3], b=[7,3], c=[3,7], d=[7,7])
     @o = create_matrix(o,o)
     @a = a
     @b = b
@@ -17,8 +21,8 @@ class Matrix
     @d = d
   end
 
-  def create_matrix(width, height)
-    m = Array.new(width) { Array.new(height) }
+  def create_matrix(columns, rows)
+    m = Array.new(columns) { Array.new(rows) }
     loop_through_matrix(m)
   end
 
