@@ -2,7 +2,7 @@
 
 ## sum of a rectangle of values in Matrix O, designated by the coordinates
 ## A and D (being opposing corners of an interior sub rectangle of O)
-## A, B, C and D are described as points like so: [x,y]
+## A, B, C and D are described as points like so: [y,x] or [row,column]
 
 ## a ----- b
 ## .       .
@@ -11,7 +11,7 @@
 ## Define Input matrix
 class Matrix
 
-  attr_reader :o, :a, :b, :c, :d, :oa, :ob, :oc, :od
+  attr_reader :o, :a, :b, :c, :d, :oa, :ob, :oc, :od, :ad
 
   def initialize(o = 10, a=[3,3], b=[7,3], c=[3,7], d=[7,7])
     @o = create_matrix(o,o)
@@ -19,10 +19,11 @@ class Matrix
     @b = b
     @c = c
     @d = d
-    @oa = compute_area(@a)
-    @ob = compute_area(@b)
-    @oc = compute_area(@c)
-    @od = compute_area(@d)
+    @oa = compute_sum(@a)
+    @ob = compute_sum(@b)
+    @oc = compute_sum(@c)
+    @od = compute_sum(@d)
+    @ad = find_sum_of_ad
   end
 
   def create_matrix(columns, rows)
@@ -52,7 +53,7 @@ class Matrix
   end
 
 
-  def compute_area(coordinate)
+  def compute_sum(coordinate)
     sum = 0
     x = find_x(coordinate)
     y = find_y(coordinate)
@@ -64,6 +65,10 @@ class Matrix
     end
 
     return sum
+  end
+
+  def find_sum_of_ad
+    @od - (@oc) - (@ob - @oa)
   end
 
 end
