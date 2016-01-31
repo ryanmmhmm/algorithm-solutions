@@ -2,11 +2,8 @@
 
 ## sum of a rectangle of values in Matrix O, designated by the coordinates
 ## A and D (being opposing corners of an interior sub rectangle of O)
-## A, B, C and D are described as points like so: [y,x] or [row,column]
-
-## a ----- b
-## .       .
-## c ----- d
+## A, B, C and D are described as points like so: [y,x] or [row, column]
+## Referencing the matrix like so O[y][x]
 
 ## Define Input matrix
 class Matrix
