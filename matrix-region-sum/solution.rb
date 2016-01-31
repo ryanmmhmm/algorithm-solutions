@@ -11,7 +11,7 @@
 ## Define Input matrix
 class Matrix
 
-  attr_reader :o, :a, :b, :c, :d
+  attr_reader :o, :a, :b, :c, :d, :oa, :ob, :oc, :od
 
   def initialize(o = 10, a=[3,3], b=[7,3], c=[3,7], d=[7,7])
     @o = create_matrix(o,o)
@@ -19,6 +19,10 @@ class Matrix
     @b = b
     @c = c
     @d = d
+    @oa = compute_area(@a)
+    @ob = compute_area(@b)
+    @oc = compute_area(@c)
+    @od = compute_area(@d)
   end
 
   def create_matrix(columns, rows)
@@ -37,6 +41,29 @@ class Matrix
   def apply_random_number
     value = Random.new
     value.rand(100)
+  end
+
+  def find_y(coordinate)
+    coordinate[0]
+  end
+
+  def find_x(coordinate)
+    coordinate[1]
+  end
+
+
+  def compute_area(coordinate)
+    sum = 0
+    x = find_x(coordinate)
+    y = find_y(coordinate)
+
+    for row in 0..y
+      for value in 0..x
+        sum += @o[y][x]
+      end
+    end
+
+    return sum
   end
 
 end
