@@ -20,3 +20,5 @@ def permutations(string)
     perms = join_sets(perms)
   end
 end
+
+permutations(str)
