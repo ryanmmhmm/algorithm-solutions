@@ -12,7 +12,8 @@ def balanced?(str)
   end
 
   while (@flag == nil) do
-    @flag = scan_right
+    scan_right
+    @flag = check_validity(@ary)
   end
 
   @flag
@@ -25,7 +26,21 @@ def init(str)
   @flag = nil
 end
 
+def check_validity(input)
+  if input.empty?
+    return true
+  elsif input.length % 2 != 0
+    return false
+  elsif input[0] == ")"
+    return false
+  else
+    nil
+  end
+end
 
+def scan_right
+
+end
 
 ####  INPUT
 
