@@ -4,7 +4,7 @@
 ## letters exactly once
 
 def anagram?(str1, str2)
-  return false if str.length == 0
+  return false if (str1.length == 0) || (str2.length == 0)
 
   str1 = format_string(str1)
   str2 = format_string(str2)
