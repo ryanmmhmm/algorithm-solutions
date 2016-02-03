@@ -42,7 +42,7 @@ puts "> #{str1} + #{str2} is #{anagram?(str1,str2)}"  # true
 
 str1 = "Can I Haz CheezeBurger?"
 str2 = "can i haz cheezeburger?"
-puts "> #{str1} + #{str2} is #{anagram?(str1,str2)}"  # false
+puts "> #{str1} + #{str2} is #{anagram?(str1,str2)}"  # true
 
 str1 = "Can I Haz CheezeBurger?"
 str2 = "I Can No Haz CheezeBurger"
