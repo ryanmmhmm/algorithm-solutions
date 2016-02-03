@@ -12,7 +12,7 @@ def even_times?(input)
   table = {}
 
   str.each_char do |c|
-    if table.keys.inlcude?(c.to_sym)
+    if table.keys.include?(c.to_sym)
       table[c.to_sym] += 1
     else
       table[c.to_sym] = 1
@@ -34,3 +34,6 @@ def check_table(table)
 
   even
 end
+
+input = "asdfasdfasd"
+puts "#{input} is #{even_times?(input)}"
