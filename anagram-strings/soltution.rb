@@ -11,6 +11,12 @@ def anagram?(str1, str2)
 
 end
 
+def format_string(string)
+  string.tr!(' ','')
+  string.gsub(/[`~!@#$%^&*()_+-={}\|:;"'<,>.?]/,'')
+  string.downcase!
+end
+
 str1 = "Eleven is two"
 str2 = "Twelve plus one"
 puts "#{str} is #{anagram?(str)}"  # true
