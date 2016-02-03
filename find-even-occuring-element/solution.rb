@@ -29,6 +29,7 @@ def check_table(table)
     if value % 2 == 0
       even = key
       break
+    end
   end
 
   even
