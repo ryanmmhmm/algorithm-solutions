@@ -9,6 +9,8 @@ def anagram?(str1, str2)
   str1 = format_string(str1)
   str2 = format_string(str2)
 
+  str1
+
 end
 
 def format_string(string)
@@ -19,4 +21,4 @@ end
 
 str1 = "Eleven is two"
 str2 = "Twelve plus one"
-puts "#{str} is #{anagram?(str)}"  # true
+puts "#{str1} is #{anagram?(str1,str2)}"  # true
