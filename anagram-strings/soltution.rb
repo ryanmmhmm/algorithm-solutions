@@ -9,6 +9,14 @@ def anagram?(str1, str2)
   return false if (str1.length == 0) || (str2.length == 0)
   return false if (str1.length != str2.length)
 
+  table1 = {}
+  table1 = convert_string(str1, table1)
+
+  table2 = {}
+  table2 = convert_string(str2, table2)
+
+  table1 == table2
+
 end
 
 def format_string(string)
@@ -16,6 +24,18 @@ def format_string(string)
   string.gsub(/[`~!@#$%^&*()_+-={}\|:;"'<,>.?]/,'')
   string.downcase!
   string
+end
+
+def convert_string(string, table)
+  string.each_char do |value|
+    if table.keys.include?(value.to_sym)
+      table[value.to_sym] += 1
+    else
+      table[value.to_sym] = 1
+    end
+  end
+
+  table
 end
 
 # str1 = "Eleven plus two"
