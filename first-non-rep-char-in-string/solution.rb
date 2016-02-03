@@ -4,8 +4,6 @@
 def repeating?(str)
 
   return "none" if str.length == 0
-
-  ary = str.split('')
   stack = [] #use a stack to compare values
 
   str.each_char do |c|
