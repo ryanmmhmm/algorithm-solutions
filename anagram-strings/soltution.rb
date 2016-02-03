@@ -6,8 +6,11 @@
 def anagram?(str1, str2)
   return false if str.length == 0
 
+  str1 = format_string(str1)
+  str2 = format_string(str2)
+
 end
 
-str1 = "Eleven is two"  # true
+str1 = "Eleven is two"
 str2 = "Twelve plus one"
-puts "#{str} is #{anagram?(str)}"
+puts "#{str} is #{anagram?(str)}"  # true
