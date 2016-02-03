@@ -15,14 +15,11 @@ def balanced?(str)
       stack.pop(2)
     else
       stack << c
+      break
     end
   end
 
-  if stack.empty?
-    true
-  else
-    false
-  end
+  stack.empty?
 end
 
 ####  INPUT
@@ -48,8 +45,20 @@ puts "---#{str} is #{balanced?(str)}---"
 str = "((())"  # false  (odd = false)
 puts "---#{str} is #{balanced?(str)}---"
 
+str = "(()()("  # false  (odd = false)
+puts "---#{str} is #{balanced?(str)}---"
+
 str = "(()())"  # true  (even, closed, true)
 puts "---#{str} is #{balanced?(str)}---"
 
 str = "()()()"  # true  (even, closed, true)
+puts "---#{str} is #{balanced?(str)}---"
+
+str = "()()()((()))()(())(((())))"  # true  (even, closed, true)
+puts "---#{str} is #{balanced?(str)}---"
+
+str = "()()()((()))()(())(((()))("  # false  (even, not closed)
+puts "---#{str} is #{balanced?(str)}---"
+
+str = "()()())(()))()(())(((())))"  # false  (even, not closed)
 puts "---#{str} is #{balanced?(str)}---"
