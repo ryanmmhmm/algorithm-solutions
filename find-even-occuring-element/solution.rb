@@ -32,11 +32,15 @@ def check_table(table)
     end
   end
 
-  not even.empty?
+  if not even.empty?
+    return even
+  else
+    return "none, they are all odd"
+  end
 end
 
 input = "asdfasdfasd"
-puts "#{input} is #{even_times?(input)}"
+puts "The even character in #{input} is #{even_times?(input)}."
 
 input = "asdfasdfasdf"
-puts "#{input} is #{even_times?(input)}"
+puts "The even character in #{input} is #{even_times?(input)}."
