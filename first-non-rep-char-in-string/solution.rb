@@ -32,3 +32,16 @@ end
 
 str = "ddddhhherrt"
 puts "#{repeating?(str)}"
+
+str = "abcd"
+puts "#{repeating?(str)}"
+
+str = "aabcd"
+puts "#{repeating?(str)}"
+
+str = "aabbcd"
+puts "#{repeating?(str)}"
+
+str = "aabbccd"
+puts "#{repeating?(str)}"
+
