@@ -24,7 +24,7 @@ def even_times?(input)
 end
 
 def check_table(table)
-  even = 0
+  even = []
   table.each do |key, value|
     if value % 2 == 0
       even = key
@@ -32,8 +32,11 @@ def check_table(table)
     end
   end
 
-  even
+  not even.empty?
 end
 
 input = "asdfasdfasd"
+puts "#{input} is #{even_times?(input)}"
+
+input = "asdfasdfasdf"
 puts "#{input} is #{even_times?(input)}"
