@@ -24,9 +24,8 @@ def repeating?(str)
 end
 
 ## if stack is empty, no repeating characters
-## if stack has character, and is same, stack.shift
-## if stack has characters, and is different, stack = c.to_a
 ## if stack has a character, and is different, break
+## if stack has characters, and is different, stack = c.to_a
 
 str = "ddddhhherrt"
 puts "#{repeating?(str)}"
