@@ -28,8 +28,8 @@ def convert_array(str)
   ary = str.split('')
 
   n = str.length / 3  # track the number of chars remaining in the sets
-  puts "set: #{set}"
   a = 0
+  i = 0
 
   for i in (1...set)
   ## insert method puts char BEFORE current index
@@ -49,15 +49,3 @@ def convert_array(str)
   ary.join
 
 end
-
-input = "aaabbbccc"  # set = 3 "abcabcabc" 0/3/6 -> "abcaabbcc" -> 3/5/7 -> "abcabcabc"
-puts "#{input} translates to #{convert_array(input)}"
-
-input = "aaaabbbbcccc"  # set = 4 "abcabcabcabc" 0/4/8 -> "abcaaabbbccc" -> 3/6/9 -> "abcabcaabbcc" -> 6/8/10
-puts "#{input} translates to #{convert_array(input)}"
-
-input = "aaaaabbbbbccccc"  # set = 5
-puts "#{input} translates to #{convert_array(input)}"
-
-input = "aaaaaabbbbbbcccccc"  # set = 6
-puts "#{input} translates to #{convert_array(input)}"
