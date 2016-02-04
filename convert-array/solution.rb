@@ -26,11 +26,6 @@ def convert_array(str)
 
   puts set = str.length / 3  # determines number of iterations for a full set
   ary = str.split('')
-
-  ## beginning index positions of char sets to translate
-  a = 0
-  b = 1 * set
-  c = 2 * set
   n = set  # track the number of chars remaining in the sets
 
   ## i must always be >= 1
