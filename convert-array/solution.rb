@@ -22,24 +22,38 @@
 ## str.length % 3 == 0  will always be divisible by 3
 
 def convert_array(str)
-  return false if str.length < 3
-  return false if str.length % 3 == 0
+  return "*invalid input*" if (str.length < 3) || (str.length % 3 != 0)
 
-  N = str.length / 3
+  puts set = str.length / 3  # determines number of iterations for a full set
   ary = str.split('')
 
   ## beginning index positions of char sets to translate
   a = 0
-  b = 1 * N
-  c = 2 * N
+  b = 1 * set
+  c = 2 * set
+  n = set  # track the number of chars remaining in the sets
 
   ## i must always be >= 1
-  for i in (1..N)
+  ## insert method puts char BEFORE current index
+  for i in (0...set)
+    a = 3 * i
+    ary[a + 1].insert(ary.slice!())
+
+    b = 3 * i + n
+    ary[b + 1].insert(ary.slice!())
+
+    c = 3 * i + 2 * n
+    ary[c + 1].insert(ary.slice!())
+
+    n -= 1 # all sets reduced by 1
   end
 
   ary
 
 end
 
-input = "aaabbbccc"
+input = "aaabbbccc"  # "abcabcabc"
+puts "#{input} translates to #{convert_array(input)}"
+
+input = "aaaabbbbcccc"  # "abcabcabcabc"
 puts "#{input} translates to #{convert_array(input)}"
