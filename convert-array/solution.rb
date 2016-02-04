@@ -29,9 +29,9 @@ def convert_array(str)
 
   n = str.length / 3  # track the number of chars remaining in the sets
   puts "set: #{set}"
-  a = (1 * n) - n
+  a = 0
 
-  for i in (1..(set - 1))
+  for i in (1...set)
   ## insert method puts char BEFORE current index
   ## i represents the number of sets that have been itterated
     b = a + n
