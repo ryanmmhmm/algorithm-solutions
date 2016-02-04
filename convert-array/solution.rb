@@ -24,26 +24,25 @@
 def convert_array(str)
   return "*invalid input*" if (str.length < 3) || (str.length % 3 != 0)
 
-  puts set = str.length / 3  # determines number of iterations for a full set
+  set = str.length / 3  # determines number of iterations for a full set
   ary = str.split('')
   n = set  # track the number of chars remaining in the sets
 
-  ## i must always be >= 1
   ## insert method puts char BEFORE current index
   for i in (0...set)
-    a = 3 * i
-    ary[a + 1].insert(ary.slice!())
+    a = i
+    ary.insert(a + 1, ary.slice!(n * i))
 
-    b = 3 * i + n
-    ary[b + 1].insert(ary.slice!())
+    b = a + i
+    ary.insert(b + 1, ary.slice!(n * i + n))
 
-    c = 3 * i + 2 * n
-    ary[c + 1].insert(ary.slice!())
+    c = a + 2 * i
+    ary.insert(c + 1, ary.slice!(n * i + 2 * n))
 
     n -= 1 # all sets reduced by 1
   end
 
-  ary
+  ary.join
 
 end
 
