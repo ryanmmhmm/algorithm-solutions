@@ -32,24 +32,3 @@ def convert_string(string)
 
   table
 end
-
-input1 = "Eleven plus two"
-input2 = "Twelve plus one"
-puts "> #{input1} + #{input2} is #{anagram?(input1,input2)}"  # true
-
-input1 = "dog"
-input2 = "god"
-puts "> #{input1} + #{input2} is #{anagram?(input1,input2)}"  # true
-
-input1 = "Can I Haz CheezeBurger?"
-input2 = "can i haz cheezeburger?"
-puts "> #{input1} + #{input2} is #{anagram?(input1,input2)}"  # false
-
-input1 = "Can I Haz CheezeBurger?"
-input2 = "I Can No Haz CheezeBurger"
-puts "> #{input1} + #{input2} is #{anagram?(input1,input2)}"  # false
-
-input1 = "!@#$%^&*()}Mother-In-Law"
-input2 = "Woman Hitler"
-puts "> #{input1} + #{input2} is #{anagram?(input1,input2)}"  # true!
-## thanks http://www.fun-with-words.com/anag_example.html for this little nugget

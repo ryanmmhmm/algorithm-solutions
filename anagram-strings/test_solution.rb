@@ -25,5 +25,6 @@ class TestSolution < MiniTest::Test
   def test_that_stray_chars_removed
     assert_equal(true, anagram?("!@#$%^&*()}Mother-In-Law","Woman Hitler"))
   end
+  ## thanks http://www.fun-with-words.com/anag_example.html for this little nugget
 
 end
