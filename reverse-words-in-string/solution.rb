@@ -17,10 +17,9 @@ def reverse_words(string)
       output.insert(0, stack.join)
       stack.clear
     end
+
   end
 
   output.insert(0, stack.join)
   output.join(' ')
 end
-
-# puts "Solution: #{reverse_words("Hello algorithm solver!")}"
