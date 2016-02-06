@@ -11,13 +11,13 @@ class TestSolution < MiniTest::Test
     assert_equal("solver! algorithm Hello", reverse_words(@input))
   end
 
-  def test_that_transforms_for_input2
-  end
+  # def test_that_transforms_for_input2
+  # end
 
-  def test_that_transforms_for_input3
-  end
+  # def test_that_transforms_for_input3
+  # end
 
-  def test_that_transforms_for_input4
-  end
+  # def test_that_transforms_for_input4
+  # end
 
 end

@@ -4,9 +4,23 @@
 
 
 def reverse_words(string)
-  ary = format_string(string)
+  output = []
+  stack = []
+
+  string.each_char do |c|
+    stack.push(c)
+
+    if (stack.last == ' ') && (stack.length == 1)
+      stack.pop
+    elsif stack.last == ' '
+      stack.pop
+      output.insert(0, stack.join)
+      stack.clear
+    end
+  end
+
+  output.insert(0, stack.join)
+  output.join(' ')
 end
 
-def format_string(string)
-  ary = string.split('')
-end
+# puts "Solution: #{reverse_words("Hello algorithm solver!")}"
