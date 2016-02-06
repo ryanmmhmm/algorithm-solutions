@@ -1,8 +1,6 @@
 
 ## Given an integer array, output all pairs that sum up to a specific value k
 ## Change the value of k for different inputs
-k = 5
-input = [2,3,4,5,6,1,1]
 
 def array_pair_sums(input, sum_value)
   k = sum_value
