@@ -16,12 +16,7 @@ def balanced?(string)
     break if closure < 0
   end
 
-  if closure != 0
-    return false
-  else
-    true
-  end
-
+  closure == 0
 end
 
 string = "()"
@@ -33,7 +28,8 @@ puts "#{string} is #{balanced?(string)}"
 string = "()(("
 puts "#{string} is #{balanced?(string)}"
 
-string = ")(" ## this case requires a break command if closure < 0
+string = "(()())"
 puts "#{string} is #{balanced?(string)}"
 
-
+string = ")(" ## this case requires a break command if closure < 0
+puts "#{string} is #{balanced?(string)}"
