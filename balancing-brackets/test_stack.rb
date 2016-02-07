@@ -12,6 +12,7 @@ class TestSolution < MiniTest::Test
     @case6 = "(()())"
     @case7 = "()()()((()))()(())(((()))("
     @case8 = "()()())(()))()(())(((())))"
+    @case9 = "1234567890AaZz((  ))"
   end
 
   def test_that_case1_is_true
@@ -44,6 +45,10 @@ class TestSolution < MiniTest::Test
 
   def test_that_case8_is_false
     assert_equal(false, balanced?(@case8))
+  end
+
+  def test_that_input_is_filtered
+    assert_equal(true, balanced?(@case9))
   end
 
 end

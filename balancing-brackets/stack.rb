@@ -1,5 +1,8 @@
 
 def balanced?(str)
+
+  str = remove_everything_but_brackets(str)
+
   if str.length % 2 != 0
     return false
   end
@@ -21,4 +24,8 @@ def balanced?(str)
   end
 
   stack.empty?
+end
+
+def remove_everything_but_brackets(input)
+  input.gsub(/[^(){}\[\]]/,'')
 end
