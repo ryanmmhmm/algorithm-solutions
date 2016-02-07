@@ -13,6 +13,8 @@ class TestSolution < MiniTest::Test
     @case7 = "()()()((()))()(())(((()))("
     @case8 = "()()())(()))()(())(((())))"
     @case9 = "1234567890AaZz((  ))"
+    @case10 = "(({}[]))"
+    @case11 = "(({)})"
   end
 
   def test_that_case1_is_true
@@ -49,6 +51,14 @@ class TestSolution < MiniTest::Test
 
   def test_that_input_is_filtered
     assert_equal(true, balanced?(@case9))
+  end
+
+  def test_that_multiple_bracket_types_is_true
+    assert_equal(true, balanced?(@case10))
+  end
+
+  def test_that_closure_on_multiple_bracket_types_works
+    assert_equal(false, balanced?(@case11))
   end
 
 end

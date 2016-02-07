@@ -2,6 +2,7 @@
 def balanced?(str)
 
   str = remove_everything_but_brackets(str)
+  set = define_bracket_sets
 
   if str.length % 2 != 0
     return false
@@ -11,9 +12,9 @@ def balanced?(str)
 
   str.each_char do |c|
 
-    if c == "("
+    if set.include?(c.to_sym)
       stack.push(c)
-    elsif (c == ")") && (stack.last == "(")
+    elsif (set.values.include?(c)) && (stack.last == set.key(c).to_s)
       stack.push(c)
       stack.pop(2)
     else
@@ -28,4 +29,8 @@ end
 
 def remove_everything_but_brackets(input)
   input.gsub(/[^(){}\[\]]/,'')
+end
+
+def define_bracket_sets
+  { "(": ")", "{": "}", "[": "]" }
 end
