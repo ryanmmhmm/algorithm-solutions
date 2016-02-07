@@ -1,7 +1,7 @@
 
-def balanced?(str)
+def balanced?(string)
 
-  str = remove_everything_but_brackets(str)
+  str = remove_everything_but_brackets(string)
   set = define_bracket_sets
 
   if str.length % 2 != 0
