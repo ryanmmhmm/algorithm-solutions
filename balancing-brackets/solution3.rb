@@ -29,7 +29,7 @@ def balanced?(string)
   output = nil
 
   closures.each do |key,value|
-    if value < 0
+    if value != 0
       output = false
       break
     else
