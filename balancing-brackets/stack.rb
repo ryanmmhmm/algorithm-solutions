@@ -4,10 +4,9 @@ def balanced?(str)
     return false
   end
 
-  ary = str.split('')
   stack = []
 
-  ary.each do |c|
+  str.each_char do |c|
 
     if c == "("
       stack.push(c)
