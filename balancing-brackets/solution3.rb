@@ -25,6 +25,7 @@ def balanced?(string)
 
   ## NOTE: hashes are fast when referencing keys
   ## they are not as useful when referencing values
+  ## --UNLESS the value is UNIQUE to to the key in the set--
 
   output = nil
 
