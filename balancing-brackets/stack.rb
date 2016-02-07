@@ -8,15 +8,17 @@ def balanced?(str)
   stack = []
 
   ary.each do |c|
+
     if c == "("
-      stack << c
+      stack.push(c)
     elsif (c == ")") && (stack.last == "(")
-      stack << c
+      stack.push(c)
       stack.pop(2)
     else
-      stack << c
+      stack.push(c)
       break
     end
+
   end
 
   stack.empty?
