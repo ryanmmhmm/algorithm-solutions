@@ -6,7 +6,7 @@ A set of solutions to different algorithmic based questions to practice computer
 - Most solution sets are built with MiniTest which can be run with the `rake` command from the directory of the algorithm
 - There are multiple ways to solve each problem, so there may be many solutions in each directory
 
-## Adding your own answer"
+## Adding your own answer
 - `git clone https://github.com/ryanmmhmm/algorithm-solutions.git`
 - `>$ cd` into the repo directory
 - `>$ cp -r new-algorithm-template directory-name-of-your-choosing`
