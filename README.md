@@ -3,8 +3,17 @@ A set of solutions to different algorithmic based questions to practice computer
 
 ## How to use:
 - Bundle install from main directory
-- Most solution sets are built with minitest which can be run with the `rake` command from the directory of the algorithm
+- Most solution sets are built with MiniTest which can be run with the `rake` command from the directory of the algorithm
 - There are multiple ways to solve each problem, so there may be many solutions in each directory
+
+## Adding your own answer"
+- `git clone https://github.com/ryanmmhmm/algorithm-solutions.git`
+- `>$ cd` into the repo directory
+- `>$ cp -r new-algorithm-template directory-name-of-your-choosing`
+- write your tests in the `test_solution.rb` file
+- write your algorithm code in the `solution.rb` file
+- run `>$ rake` from the command line in the problem directory
+- solve a problem!  solve it again!  keep learning!
 
 ## Focus:
 The focus here is to practice soltutions from CS fundamentals using language agnostic programming patterns.
